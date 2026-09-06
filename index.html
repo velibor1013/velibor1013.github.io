@@ -1,126 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velibor Tunic — Portfolio</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-    <head>
-        <title>Velibor Portfolio</title>
-        <!---- Meta tags-->
-        <meta charset="utf-8">
-        <meta name="author" content="Velibor Tunic">
-        <meta name="keywords" content="HTML, JavaScript, Portfolio">
-        <meta name="description" content="Velibor Tunic Portfolio">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="msapplication-TileColor" content="#00aba9">
-        <meta name="google-site-verification" content="1P5YahTL7LykWFjad9yu2Q4KJqfsT7UKLzbP7WtggtM" />
-        <meta name="theme-color" content="#ffffff">
-        <!--<link rel="stylesheet" href="styling.css" /> -->
-        <link rel="stylesheet" href="../CSS/main.css" />
-        <link rel="stylesheet" href="../CSS/home-page.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
-        <link rel="apple-touch-icon" sizes="180x180" href="../Sources/Favicon/apple-touch-icon.png">
-        <link rel="icon" type="/png" sizes="32x32" href="../Sources/Favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../Sources/Favicon/favicon-16x16.png">
-        <link rel="manifest" href="../Sources/Favicon/site.webmanifest">
-        <link rel="mask-icon" href="../Sources/Favicon/safari-pinned-tab.svg" color="#5bbad5">
-    </head>
+<div class="scroll-progress" id="scrollProgress"></div>
 
-    <body class="body">
-        <div id="myNav" class="mobileMenu">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="mobileMenu-content">
-              <a href="https://github.com/velibor1013" onclick="closeNav()" target="_blank" class="links">Github</a>
-              <a href="#projects" onclick="closeNav()" class="links">Projects</a>
-              <a href="Sources\Resume - Velibor Tunic.pdf" onclick="closeNav()" target="_blank" class="links">Resume</a>
-              <a href="#contact" onclick="closeNav()" class="links">Contact</a>
-            </div>
+<header class="site-header">
+  <nav class="navbar">
+    <a href="#home" class="logo">Velibor Tunic</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+      <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v3M12 18.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+      <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+    </button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HOME / HERO -->
+  <section id="home" class="section hero">
+    <div class="hero-blobs" aria-hidden="true">
+      <span class="blob blob-1"></span>
+      <span class="blob blob-2"></span>
+      <span class="blob blob-3"></span>
+    </div>
+    <div class="hero-content">
+      <p class="eyebrow reveal" style="--i:0">Welcome to my portfolio</p>
+      <h1 class="reveal" style="--i:1">Hi, I'm <span class="accent gradient-text">Velibor Tunic</span></h1>
+      <p class="subtitle reveal" style="--i:2">AI Developer &amp; Co-Founder</p>
+      <p class="location reveal" style="--i:3">
+        <svg class="icon icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+        Calgary, Alberta, Canada
+      </p>
+      <div class="hero-buttons reveal" style="--i:4">
+        <a href="#contact" class="btn btn-primary"><span>Get in touch</span></a>
+      </div>
+      <div class="social-links reveal" style="--i:5">
+        <a class="logo-link" href="https://www.linkedin.com/in/velibor-tunic-81b9001a6/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <img class="theme-logo logo-light" src="assets/InBug-Black.png" alt="">
+          <img class="theme-logo logo-dark" src="assets/InBug-White.png" alt="">
+        </a>
+        <a class="logo-link" href="https://github.com/velibor1013" target="_blank" rel="noopener" aria-label="GitHub">
+          <img class="theme-logo logo-light" src="assets/GitHub_Invertocat_Black.svg" alt="">
+          <img class="theme-logo logo-dark" src="assets/GitHub_Invertocat_White.svg" alt="">
+        </a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <h2 class="section-title fade-in">About Me</h2>
+      <div class="about-grid stagger">
+        <div class="about-text">
+          <p>
+            I'm a Computer Information Systems student at Mount Royal University with a focus on
+            applied AI. I like taking a project from a rough idea to something people can actually
+            use — most recently as the AI developer behind Infinimatch, a media recommendation app,
+            and as co-founder of Red Mesa Development, where I help small businesses build and
+            automate the software they need.
+          </p>
+          <p>
+            Outside of client work, I build for hackathons and side projects when I get the chance —
+            Planty, a habit-tracking robotic plant, took 1st place at MRU Hacks 2025. I'm always
+            looking for the next problem worth building a solution for, whether that's applying
+            machine learning, automating a clunky process, or just making something fun.
+          </p>
         </div>
-        <header>
-            <div id="menus">
-                <h2 id="name"><a href="../index.html" class="links">V.T.</a></h2>
-                <div class="normalMenu">
-                    <ul class="pageLinks">
-                        <li><a href="https://github.com/velibor1013" target="_blank" class="links">Github</a></li>
-                        <li><a href="#projects" class="links">Projects</a></li>
-                        <li><a href="Sources\Resume - Velibor Tunic.pdf" target="_blank" class="links">Resume</a></li>
-                        <li><a href="#contact" class="links">Contact</a></li>
-                    </ul>
-                </div>
-                <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="menuButton">&#9776; </span>
+        <div class="education-card card">
+          <h3>
+            <svg class="icon icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8l10-5 10 5-10 5-10-5z"/><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5"/><path d="M22 8v6.5"/></svg>
+            Education
+          </h3>
+          <div class="timeline-item-inner">
+            <h4>Bachelor's Degree in Computer Information Systems</h4>
+            <p class="timeline-place">Mount Royal University</p>
+            <p class="timeline-date">2021 September - 2027 January</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section alt-bg">
+    <div class="section-inner">
+      <h2 class="section-title fade-in">Experience</h2>
+      <div class="timeline stagger">
+
+        <div class="timeline-item card">
+          <div class="timeline-header">
+            <h3>IT Consultant</h3>
+            <span class="timeline-date">2025 January - Present</span>
+          </div>
+          <p class="timeline-place">Red Mesa Development — IT Consulting Startup</p>
+          <p class="timeline-place-location">Calgary, AB</p>
+          <p>
+            Founder and AI Developer
+          </p>
+          <a href="https://redmesa.dev/" class="timeline-link" target="_blank" rel="noopener"><span>Learn more</span><span class="link-arrow">→</span></a>
+        </div>
+
+        <div class="timeline-item card">
+          <div class="timeline-header">
+            <h3>Enterprise Architecture Intern</h3>
+            <span class="timeline-date">2024 May - 2024 August</span>
+          </div>
+          <p class="timeline-place">City of Calgary</p>
+          <p class="timeline-place-location">Calgary, AB</p>
+          <p>
+            Worked with the enterprise architecture team to analyze various departments and create and present the analysis to the team as a starting point for a larger project. 
+            Worked with the robotic process automation(RPA) team at every stage of development to automate tedious and time-consuming processes of various departments.
+            Enhanced and simplified the document control process of the RPA team to help the teams' ability to track project status.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS and ACHIEVEMENTS -->
+  <section id="projects" class="section">
+    <div class="section-inner">
+      <h2 class="section-title fade-in">Projects And Achievements</h2>
+      <div class="projects-grid stagger">
+
+        <div class="project-card card">
+          <div class="project-image-wrap">
+            <img src="assets/Infinimatch%202.png" alt="Infinimatch app screenshot showing a grid of liked movies">
+          </div>
+          <div class="project-body">
+            <h3>Infinimatch</h3>
+            <p class="project-role">Role: AI Developer</p>
+            <p>
+              Infinimatch was created as part of the Tech Liftoff program, hosted by the Institute for Innovation and Entrepreneurship at Mount Royal University in Calgary Alberta. Designed to solve the problem of poor media recommendations.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Reccomendation Algorithm</span>
             </div>
-        </header>
-
-        <main class="home">
-            <section class="intro">
-                <h1>Velibor Tunic</h1>
-                <h2>BCIS Student at Mount Royal University</h2>
-            </section>
-
-            <p><a class="down"></a></p>
-
-            <section class="bio">
-                <div class="aboutMe">
-                    <h2>About Me</h2>
-                    <p>
-                        My name is Velibor Tunic, I am a student at Mount Royal Univesity studying
-                        Computer Information Systems.
-                    </p>
-                    <p>
-                        I am passionate about coding and learning new things i can do with it, 
-                        I just love the feeling i get when i understand something in depth and it just flows from my fingertips
-                        to my keyboard and turns into something usefull.
-                    </p>
-                </div>
-                <div class="languages">
-                    <h2>My Languages</h2>
-                    <ul>
-                        <li><img src="../Sources/JavaLogo.svg" id="JavaLogo"/> Java</li> 
-                        <li><ion-icon name="logo-python"></ion-icon> Python</li> 
-                        <li><ion-icon name="logo-html5"></ion-icon> HTML</li> 
-                        <li><ion-icon name="logo-css3"></ion-icon> CSS</li> 
-                        <li><ion-icon name="server"></ion-icon> SQL</li> 
-                    </ul>
-                </div>
-            </section>
-            <section id="projects">
-                <!--- TODO: add projects --->
-                <h2>My Projects</h2>
-                <ul>
-                    <li>School Projects</li>
-                    <li>Fun Projects</li>
-                </ul>
-            </section>
-            <section id="contact">
-                <!--- TODO: maybe add more contact info --->
-                <h2 class="contact-me">Contact Me</h2>
-                <ul>
-                    <li>Email 1: <a href = "mailto: velibor1013@gmail.com" class="contacts">velibor1013@gmail.com</a></li>
-                    <li>Email 2: <a href = "mailto: vtuni546@mtroyal.ca" class="contacts">vtuni546@mtroyal.ca</a></li>
-                    <li>Phone: <a href="tel:5874364615" class="contacts">(587)-436-4615</a></li>
-                </ul>
-
-            </section>
-
-        </main>
-        <footer class="footer">
-            <h4>Author: Velibor Tunic</h4>
-            <div id="socialLinks">
-                <a href="https://www.instagram.com/velibor1013/" target="_blank" class="links">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                </a>
-                <a href="https://github.com/velibor1013" target="_blank" class="links">
-                    <ion-icon name="logo-github"></ion-icon>
-                </a>
-                <a href="https://www.linkedin.com/in/velibor-tunic-81b9001a6/" target="_blank" class="links">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                </a>
+            <div class="project-links">
+              <a href="https://infinimatch.app/" target="_blank" rel="noopener"><span>View Project</span><span class="link-arrow">→</span></a>
             </div>
-        </footer>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-        <script>
-            function openNav() { document.getElementById("myNav").style.height = "100%"; }
-            function closeNav() { document.getElementById("myNav").style.height = "0%"; }
-        </script>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    </body>
+          </div>
+        </div>
+
+        <!-- Duplicate this block for additional projects -->
+        <div class="project-card card">
+          <div class="project-image-wrap">
+            <img src="assets/MRU%20Hacks%202025.jpg" alt="Planty, a robotic lego plant built at MRU Hacks 2025">
+          </div>
+          <div class="project-body">
+            <h3>MRU Hacks 1st Place</h3>
+            <p class="project-role">Role: Robotics Designer</p>
+            <p>
+            Planty a habit tracking app that links your habits to the wellbeing of a roboticized lego plant.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Hackathon</span>
+              <span class="tag">Robotics</span>
+            </div>
+            <div class="project-links">
+              <a href="https://devpost.com/software/mru-hacks-2025-project-team-kvk" target="_blank" rel="noopener"><span>View Project</span><span class="link-arrow">→</span></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="section-inner">
+      <h2 class="section-title fade-in">Get in Touch</h2>
+      <p class="contact-intro fade-in">
+        Have a project, an opportunity, or just want to talk about AI and software? My inbox is always open.
+      </p>
+      <div class="contact-grid stagger">
+        <a class="contact-item card" href="mailto:velibor1013@gmail.com">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3.5 6l8.5 7 8.5-7"/></svg>
+          </span>
+          <span>velibor1013@gmail.com</span>
+        </a>
+        <a class="contact-item card" href="https://www.linkedin.com/in/velibor-tunic-81b9001a6/" target="_blank" rel="noopener">
+          <span class="contact-icon">
+            <img class="theme-logo logo-light" src="assets/InBug-Black.png" alt="">
+            <img class="theme-logo logo-dark" src="assets/InBug-White.png" alt="">
+          </span>
+          <span>LinkedIn</span>
+        </a>
+        <a class="contact-item card" href="https://github.com/velibor1013" target="_blank" rel="noopener">
+          <span class="contact-icon">
+            <img class="theme-logo logo-light" src="assets/GitHub_Invertocat_Black.svg" alt="">
+            <img class="theme-logo logo-dark" src="assets/GitHub_Invertocat_White.svg" alt="">
+          </span>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Velibor Tunic. All rights reserved.</p>
+</footer>
+
+<button id="backToTop" aria-label="Back to top">
+  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
